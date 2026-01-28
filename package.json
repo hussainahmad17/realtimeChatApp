@@ -1,12 +1,17 @@
 {
   "name": "chat-app",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "dev:backend": "npm run dev --workspace backend",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run start --workspace backend"
   },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC"
