@@ -1,9 +1,5 @@
-import dotenv from "dotenv";
-
 import { server } from "../backend/src/server.js";
 import { connectDB } from "../backend/src/lib/db.js";
-
-dotenv.config();
 
 let isConnected = false;
 
